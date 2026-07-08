@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allyson Leff | Event & Marketing Executive</title>
+<style>
+  :root {
+    --navy: #1b2a3d;
+    --navy-dark: #121e2c;
+    --gold: #c8a55b;
+    --gray: #5a6472;
+    --light: #f7f7f5;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #26313f;
+    background: var(--light);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 6vw;
+  }
+  nav .brand { color: var(--white); font-size: 1.15rem; font-weight: 600; letter-spacing: 1px; }
+  nav ul { list-style: none; display: flex; gap: 28px; }
+  nav ul li a { color: #cfd6de; font-size: 0.9rem; letter-spacing: 0.5px; transition: color 0.2s; }
+  nav ul li a:hover { color: var(--gold); }
+
+  /* Hero */
+  header.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 100px 6vw 80px;
+    text-align: center;
+  }
+  header.hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
+  header.hero .role { font-size: 1.2rem; color: var(--gold); font-weight: 500; margin-bottom: 8px; }
+  header.hero .location { font-size: 0.95rem; color: #b7c0cb; margin-bottom: 26px; }
+  header.hero .links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+  header.hero .links a {
+    border: 1px solid var(--gold); color: var(--gold);
+    padding: 9px 22px; border-radius: 30px; font-size: 0.85rem; letter-spacing: 0.5px;
+    transition: all 0.2s;
+  }
+  header.hero .links a:hover { background: var(--gold); color: var(--navy-dark); }
+
+  section { padding: 70px 6vw; max-width: 980px; margin: 0 auto; }
+  section h2 {
+    font-size: 1.6rem; color: var(--navy); margin-bottom: 36px;
+    text-transform: uppercase; letter-spacing: 2px; font-weight: 700;
+    border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 8px;
+  }
+
+  /* About */
+  #about p { font-size: 1.05rem; color: var(--gray); max-width: 760px; }
+
+  /* Skills / certs / awards strip */
+  .strip { background: var(--white); }
+  .strip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+  .strip-grid .card h3 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 10px;
+  }
+  .strip-grid .card ul { list-style: none; }
+  .strip-grid .card li { color: #26313f; font-size: 0.98rem; margin-bottom: 6px; }
+
+  /* Experience */
+  .job { position: relative; padding-left: 28px; border-left: 2px solid #dfe3e8; margin-bottom: 42px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: ''; position: absolute; left: -7px; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%; background: var(--gold);
+  }
+  .job .title-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 2px; }
+  .job h3 { font-size: 1.15rem; color: var(--navy); }
+  .job .dates { font-size: 0.85rem; color: var(--gray); white-space: nowrap; }
+  .job .company { font-size: 0.95rem; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+  .job ul { padding-left: 20px; color: var(--gray); font-size: 0.95rem; }
+  .job ul li { margin-bottom: 5px; }
+
+  /* Education */
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+  .edu-grid .card {
+    background: var(--white); padding: 26px; border-radius: 8px; border-top: 3px solid var(--gold);
+  }
+  .edu-grid .card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 6px; }
+  .edu-grid .card p { color: var(--gray); font-size: 0.92rem; }
+
+  /* Contact */
+  #contact { text-align: center; }
+  #contact p { color: var(--gray); margin-bottom: 24px; }
+  #contact a.email-btn {
+    display: inline-block; background: var(--navy); color: var(--white);
+    padding: 14px 34px; border-radius: 30px; font-size: 0.95rem; letter-spacing: 0.5px;
+    transition: background 0.2s;
+  }
+  #contact a.email-btn:hover { background: var(--gold); color: var(--navy-dark); }
+
+  footer { text-align: center; padding: 30px; color: #9aa4af; font-size: 0.8rem; background: var(--navy); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 14px; }
+    nav ul li a { font-size: 0.78rem; }
+    header.hero h1 { font-size: 2.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">ALLYSON LEFF</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h1>Allyson Leff</h1>
+  <div class="role">Associate Director of Marketing Events, Covington &amp; Burling LLP</div>
+  <div class="location">Washington, D.C.</div>
+  <div class="links">
+    <a href="mailto:ally.leff@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/allyleff/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>Event and marketing operations executive with over a decade of experience leading high-profile conferences, galas, sponsor activations, and executive-level programming for trade associations, law firms, and major live events. Skilled in end-to-end event strategy — from budgeting and vendor negotiation to sponsorship activation and on-site execution — with a track record of managing multi-million-dollar budgets and cross-functional teams. Recognized as a BizBash 40 Under 40 honoree.</p>
+</section>
+
+<section class="strip">
+  <div class="strip-grid">
+    <div class="card">
+      <h3>Top Skills</h3>
+      <ul><li>Event Planning</li><li>Sponsorship</li><li>Executive Production</li></ul>
+    </div>
+    <div class="card">
+      <h3>Certifications</h3>
+      <ul><li>Event Management</li></ul>
+    </div>
+    <div class="card">
+      <h3>Honors &amp; Awards</h3>
+      <ul><li>BizBash 40 Under 40</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Associate Director of Marketing Events</h3>
+      <span class="dates">May 2026 – Present</span>
+    </div>
+    <div class="company">Covington &amp; Burling LLP · Washington, DC</div>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Senior Director, Conference Operations</h3>
+      <span class="dates">Jan 2024 – Apr 2026</span>
+    </div>
+    <div class="company">National Association of Manufacturers (NAM) · Washington, DC</div>
+    <ul>
+      <li>Developed and executed comprehensive event project plans across NAM, the Manufacturing Institute, and the Council of Manufacturing Associations, covering summits, galas, leadership events, board meetings, and annual conferences.</li>
+      <li>Owned site selection, RFPs, vendor negotiation, budgeting, logistics, F&B, speaker coordination, and sponsor requirements for in-person, hybrid, and virtual events.</li>
+      <li>Mentored two direct reports and coordinated internal meeting management services for the NAM Conference Center.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Director, Conference Operations</h3>
+      <span class="dates">Jun 2021 – Jan 2024</span>
+    </div>
+    <div class="company">National Association of Manufacturers (NAM) · Washington, DC</div>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Strategic Project Manager</h3>
+      <span class="dates">Feb 2021 – Jun 2021</span>
+    </div>
+    <div class="company">Merchant Advisory Group · Washington, DC</div>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Manager, Meeting &amp; Event Services</h3>
+      <span class="dates">Feb 2018 – Nov 2020</span>
+    </div>
+    <div class="company">U.S. Travel Association · Washington, DC Metro Area</div>
+    <ul>
+      <li>Led sponsorship activation for signature events including IPW (6,000+ attendees) and ESTO (1,000+ attendees), managing relationships with 90+ sponsors and 180+ board members.</li>
+      <li>Directed logistics for 12+ annual events: registration, speaker management, hotel blocks, AV, F&B, and vendor/software selection.</li>
+      <li>Led RFP and selection of new virtual/hybrid event software and the table reservation process for IPW luncheons (600 daily tables).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Event Director</h3>
+      <span class="dates">Jul 2016 – Dec 2017</span>
+    </div>
+    <div class="company">Washington International Horse Show · Washington, DC</div>
+    <ul>
+      <li>Managed a $4M+ event budget and strategy for a six-day, 26,000+ spectator event at Capital One Arena.</li>
+      <li>Owned venue management relationship and led brand, marketing, and sponsor/charity/media partner activation from contract to on-site fulfillment.</li>
+      <li>Directed team management, master operations timeline, and all event branding and social media strategy.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Operations &amp; Client Service Manager</h3>
+      <span class="dates">Jan 2015 – May 2016</span>
+    </div>
+    <div class="company">Double H Farm · Wellington, FL</div>
+    <ul>
+      <li>Managed daily operations for 20+ employees, facilities, finances, and vendor relationships at a leading international show jumping facility.</li>
+      <li>Developed a digital and editorial marketing strategy to grow business exposure locally and internationally.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="title-row">
+      <h3>Sponsorship &amp; Hospitality Intern</h3>
+      <span class="dates">May 2013 – Jan 2015</span>
+    </div>
+    <div class="company">Washington International Horse Show · Washington, DC</div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu-grid">
+    <div class="card">
+      <h3>Georgetown University</h3>
+      <p>Professional Certificate, Project Management</p>
+    </div>
+    <div class="card">
+      <h3>American University</h3>
+      <p>Bachelor of Arts (B.A.), Psychology</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to connecting on new opportunities, partnerships, and event collaborations.</p>
+  <a class="email-btn" href="mailto:ally.leff@gmail.com">ally.leff@gmail.com</a>
+</section>
+
+<footer>&copy; 2026 Allyson Leff · Built and hosted on GitHub Pages</footer>
+
+</body>
+</html>
